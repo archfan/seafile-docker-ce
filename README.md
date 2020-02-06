@@ -1,7 +1,7 @@
 
 ## About
 
-- This repository contains the sources that are used to build the `h44z/seafile-ce` docker image.
+- This repository contains the sources that are used to build the `archfan/seafile-ce` docker image.
 
 - It is based on the official docker image (https://github.com/haiwen/seafile-docker). 
 
@@ -19,7 +19,7 @@ After the dependcies have been set up, change to the image directory and build t
 
 ```
 # get the sources
-git clone https://github.com/h44z/seafile-docker.git
+git clone https://github.com/archfan/seafile-docker.git
 cd seafile-docker/image
 
 # build the image
@@ -32,7 +32,7 @@ Make sure that you have installed Docker Compose with version 1.21.0 or higher.
 
 ```
 # get the sources
-git clone https://github.com/h44z/seafile-docker.git
+git clone https://github.com/archfan/seafile-docker.git
 cd seafile-docker
 
 # configure the environment, change seafile settings

@@ -11,10 +11,10 @@ endif
 
 server_version=${VERSION}
 
-base_image=h44z/base-ce:18.04
-latest_base_image=h44z/base-ce:latest
-server_image=h44z/seafile-ce:$(server_version)
-latest_server_image=h44z/seafile-ce:latest
+base_image=archfan/base-ce:18.04
+latest_base_image=archfan/base-ce:latest
+server_image=archfan/seafile-ce:$(server_version)
+latest_server_image=archfan/seafile-ce:latest
 
 all:
 	@echo
@@ -22,7 +22,7 @@ all:
 	@echo
 
 base:
-	docker pull phusion/baseimage:0.11
+	docker pull phusion/baseimage:master
 	cd base && docker build --no-cache -t $(base_image) .
 	
 server:
