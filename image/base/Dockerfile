@@ -21,10 +21,10 @@ RUN curl -sSL -o /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py && \
     rm -rf /tmp/get-pip.py && \
     pip3 install -U wheel
 
-COPY ./requirements.txt /tmp/
+COPY ./image/base/requirements.txt /tmp/
 RUN pip3 install -r /tmp/requirements.txt
 
-COPY ./services /services
+COPY ./image/base/services /services
 
 RUN mkdir -p /etc/service/nginx && \
     rm -f /etc/nginx/sites-enabled/* /etc/nginx/conf.d/* && \
