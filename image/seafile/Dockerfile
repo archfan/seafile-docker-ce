@@ -1,4 +1,4 @@
-FROM h44z/base-ce:18.04
+FROM archfan/base-ce:18.04
 
 # For support set local time zone.
 RUN export DEBIAN_FRONTEND=noninteractive && apt-get update && apt-get install tzdata -y
@@ -8,7 +8,7 @@ WORKDIR /opt/seafile
 RUN mkdir -p /etc/my_init.d
 
 # build-time arguments, use them in docker build with --build-arg switch to build different version
-ARG SEAFILE_VERSION=7.0.5
+ARG SEAFILE_VERSION=7.1.1
 ARG LDAP_IGNORE_CERT_CHECK=false
 
 ENV SEAFILE_SERVER=seafile-server

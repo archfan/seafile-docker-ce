@@ -21,8 +21,9 @@ RUN curl -sSL -o /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py && \
     rm -rf /tmp/get-pip.py && \
     pip3 install -U wheel
 
-ADD requirements.txt  /tmp/requirements.txt
-RUN pip install -r /tmp/requirements.txt
+COPY requirements.txt /tmp
+WORKDIR /tmp
+RUN pip3 install -r requirements.txt
 
 COPY services /services
 
